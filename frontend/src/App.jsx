@@ -16,8 +16,10 @@ function App() {
       withCredentials: true,
     });
 
+
     setSocket(newSocket);
 
+    
     newSocket.on("play", (data) => {
       const musicId = data.musicId;
       window.location.href = `/music/${musicId}`;
